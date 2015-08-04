@@ -34,7 +34,7 @@ body{
         }
         #toggles{
         margin:0 auto;
-            width:200px;
+            width:25%;
             list-style: none;
             border: 1px solid grey;
             border-radius: 3px;
@@ -80,7 +80,7 @@ body{
             top:10px;
         }
         
-        #CSSContainer, #JSContainer{
+        #CSSContainer, #JSContainer,#CSSCDNContainer{
             display:none;
         }
         iframe{

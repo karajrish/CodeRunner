@@ -17,9 +17,9 @@
     });
     
  $("#RunButton").click(function(){
-                          
-     $("iframe").contents().find("html").html('<style>' + $("#CSSCode").val() + '</style>' + $("#HTMLCode").val());     
      
+     $.ajax({ url: $('#CSSCDNCode').val().replace(/ /g,'').replace(/\r?\n|\r/g,''), success: function(data) { $('#CSSCode').val(data); } });   
+     $("iframe").contents().find("html").html('<style>' + $("#CSSCode").val() + '</style>' + $("#HTMLCode").val()); 
      document.getElementById("resultFrame").contentWindow.eval($("#JSCode").val());
     });
 
@@ -29,4 +29,5 @@
         $("CSSCode").val(" ");
         $("JSCode").val(" ");
     });
+
    
